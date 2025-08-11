@@ -6,19 +6,40 @@ metadata:
   namespace: redhat-ods-applications
 spec:
   components:
-    dashboard:
+    codeflare:
+      managementState: Managed
+    kserve:
+      managementState: Managed
+      nim:
+        managementState: Managed
+      rawDeploymentServiceConfig: Headless
+      serving:
+        ingressGateway:
+          certificate:
+            type: OpenshiftDefaultIngress
+        managementState: Managed
+        name: knative-serving
+    modelregistry:
+      managementState: Managed
+      registriesNamespace: rhoai-model-registries
+    feastoperator:
+      managementState: Managed
+    trustyai:
+      managementState: Managed
+    ray:
+      managementState: Managed
+    kueue:
       managementState: Managed
     workbenches:
       managementState: Managed
-    modelregistry:
+      workbenchNamespace: rhods-notebooks
+    dashboard:
       managementState: Managed
-    codeflare:
-      managementState: Removed
-    kserve:
+    modelmeshserving:
       managementState: Managed
-    kueue:
-      managementState: Removed
+    llamastackoperator:
+      managementState: Managed
     datasciencepipelines:
-      managementState: Removed
+      managementState: Managed
     trainingoperator:
-      managementState: Removed
+      managementState: Managed
