@@ -35,7 +35,7 @@ spec:
       configMapName: ''
       nlsEnabled: true
     enabled: true
-    kernelModuleType: auto
+    kernelModuleType: proprietary
     certConfig:
       name: ''
     useNvidiaDriverCRD: false
